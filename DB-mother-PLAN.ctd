@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cherrytree>
+  <bookmarks list=""/>
+  <node name="Database_For_Mother" unique_id="4" prog_lang="plain-text" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1633356440" ts_lastsave="1633363835">
+    <rich_text>THIS WILL BE A DATABASE CREATION  USING PYTHON AND MYSQL.ALL MYSQL DATA INSERTION WILL BECOME USING PYTHON
+
+The DB will have:
+		id  |name  |praksi  |nameOfFile  |
+
+Each row will have the above columns  PLUS extra connections to the WORD file!!
+
+Each row will be created by reading the word file
+
+After the DB CREATION (reading all word files,inserting them in DB ) we could search the database by their columns and open the WORD DOCUMENT!
+
+-MySQL DB Server   ,PYTHON (Modules → Tkinter  ,GUI builder  ,MySQL-connector)</rich_text>
+    <node name="Reading Word" unique_id="1" prog_lang="plain-text" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1633355985" ts_lastsave="1634898967">
+      <rich_text>Here we try to read the word documents
+
+Only fisrt 30(max) lines are needed --&gt;
+	Need to read 1)the number of document (this can be done from the name of the file!) 2)the type of the file (praksi!) 3)PATH (maybe to disk) of file
+
+reading process--&gt;
+			1)download antiword
+			2)antiword nameOfFile.doc &gt; nameOfFile.txt		extracting file to .txt format
+			3)read them in python using content manager (with open ......)
+
+Problem1:when i try to read some  .doc documents in python,we have format problem so text isnt regocnizable.
+	solution: UntitledDecoder.py(or MyDecoder.py) --&gt;fixing format -&gt;then extract again to &lt;file.txt&gt;---&gt;read again!
+					-Decoder try to recognize the file that are not readable and Encode-Decode the format according to Greek letter encoding that found online!
+
+Problem 2:How many lines to read for word document to keep the ‘praksi’(praksi chcrachterizes each file,can be multiple files tha have same ‘praksi’)
+	Solution:At start we read 20 lines but there were some problems that pop out.So we use 30(first 30 lines)
+
+After reading first lines,we clean them (ignoring special charactes like ‘\n’--new line or others) and keep first 3 for extracting the ‘praksi’
+
+
+
+
+
+</rich_text>
+    </node>
+    <node name="Implementing data base" unique_id="2" prog_lang="plain-text" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1633356374" ts_lastsave="1634898351">
+      <rich_text>1)Create the database in MYSQL
+
+2)Create 2 tables
+		1st table with   |name  |praksi  |nameOfFile  |
+		2nd table with  id |word file PATH!!|  			its important to store just the path of the file and when needed open it by path!
+
+By searching and finding what we want from first table ,we will be in position to ‘’call'' the word file ,open it ,make changes and save it back to db!
+
+
+--New method
+
+1)Create database using Sqlite!(no administration logging wanted,easier set up of database and getting from one disk to another!)
+
+2)Create 1 table with   |ID    |praksi  |nameOfFile  |PATH of word documents|
+
+We only fetch things from 1 table ,using only the ‘praksi’(it depends on the problem ,so the search by praksi is only useful)
+
+</rich_text>
+    </node>
+    <node name="Implementing the application environment for DB" unique_id="5" prog_lang="plain-text" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1633358072" ts_lastsave="1634898693">
+      <rich_text>Here we will make the GUI that the user(mother!) will use to search files
+
+Operations:--&gt;Gui --&gt;fetch from database to gui--&gt;selection of file from gui --&gt;opening the file from path !
+
+1)Python Tkinter library for GUI implementation
+
+2)2 listbox objects :
+		1st)for searching by praksi
+		2nd)selecting each individual document and open it
+
+Buttons for fetching ,searching and opening the file
+
+
+
+3)Opening the file --&gt;use specific-Windows command to open any word document by providing &lt;PATH&gt;</rich_text>
+    </node>
+  </node>
+</cherrytree>
