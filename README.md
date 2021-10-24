@@ -18,7 +18,7 @@ Instructions for running the application:
 	-The result of 'Datatransformation2.py' is a "result.json" filei(it is not uploaded in this repository).This file will be processed by 'db_creation.py' for database generation
 	-'db_creation.py' creating the ''tdb.db''(database-file that can be moved from system to system) inside sqlite3 system.(Sqlite3 installed in linux using (apt-get install sqlite3)
 	-'dbClass.py' contains database class.
-	-*** ''tdb.db'' (database file) ,'app.py' ,'dbClass.py' are the only files that are necessary for RUNNING the app!(so the only thing to run the app is a database,a table with files,'app.py','dbClass.py' and modify them accordingly to fetch specific cols or rows!)***
+	-*** ''tdb.db'' (database file) ,'app.py' ,'dbClass.py' are the only files that are necessary for RUNNING the app!(so the only thing to run the app is a database,a table with data,'app.py','dbClass.py' and modify them accordingly to fetch specific cols or rows!)***
 	-'dbClass.py' , 'db_creation.py' must be in the same folder when  'db_creation.py' is executed.
 	-we run 'app.py' that contains the GUI.(for installing tkinter --> (sudo) apt-get install python3-tk)
 	-'dbClass.py' ,'app.py' mut be on the same folder when 'app.py' is executed
