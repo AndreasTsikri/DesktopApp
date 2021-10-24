@@ -169,7 +169,7 @@ select_praksi_button=tk.Button(text='select praksi',width=15,bg='black',fg=('red
 select_praksi_button.pack()
 
 #button-OPEN WORD!
-open_button=tk.Button(text='open file',width=25,bg='red',fg=('green'),command=open_word_linux)#change command:open_word_windows for windows machine!
+open_button=tk.Button(text='open file',width=25,bg='red',fg=('black'),command=open_word_linux)#change command:open_word_windows for windows machine!
 open_button.pack()
 
 #start of app
