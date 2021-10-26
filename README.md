@@ -3,6 +3,14 @@ Desktop app using Tkinter for GUI and sqlite for database management system.
 Developed completely on linux systems.
 It will be used on windows.
 
+```diff
+-Description of the app:
+```
+This app provides an interactive environment (or a way!) of searching a big amount of files(word files) that are stored in a specific folder in the HD.Files contain informations that are needed and all have some specific detail that we want to search so we can identify the file(greek word 'praksi').Its not necessary to search only by this detail but this was the original purpose of development!
+we create a database with the details of the files,providing a way to the user to search whatever detail they want(here we have implemented the 'praksi' search as far as today)  along with the path of the file.
+When user decide the file he wants , hw is in position to open the file!
+
+
 AppPreview contains snapshots of the app.
 
 Db-mother-PLAN.ctd is a file describing the workflow of the app,created using cherry-tree application.
